@@ -6,7 +6,6 @@ import java.applet.AudioClip;
 
 //Level 0
 
-
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
@@ -14,10 +13,28 @@ public class AnimalFarm {
 
 	AnimalFarm() {
 		/*
-		 * 1. Ask the user which animal they want, then play the sound of that animal.
+		 * 1. Ask the user which animal they want, then play the sound of that animal.\
+		 * 
 		 */
-		
-		/* 2. Make it so that the user can keep entering new animals. */
+
+		for (int i = 0; i < 100; i++) {
+			String edd = JOptionPane.showInputDialog(null, "What animals noise would you like to have me make?");
+			if (edd.equalsIgnoreCase("Cow")) {
+				playMoo();
+			}
+			if (edd.equalsIgnoreCase("Dog")) {
+				playWoof();
+			}
+			if (edd.equalsIgnoreCase("Duck")) {
+				playQuack();
+			}
+			if (edd.equalsIgnoreCase("Cat")) {
+				playmeow();
+			}
+			if (edd.equalsIgnoreCase("Llama")) {
+				playllama();
+			}
+		}
 	}
 
 	void playMoo() {
@@ -32,11 +49,20 @@ public class AnimalFarm {
 		playNoise(woofFile);
 	}
 
+	void playmeow() {
+		playNoise(meowFile);
+	}
+
+	void playllama() {
+		playNoise(llamaFile);
+	}
+
 	String quackFile = "quack.wav";
 	String mooFile = "moo.wav";
 	String woofFile = "woof.wav";
 	String meowFile = "meow.wav";
 	String llamaFile = "llama.wav";
+	private String edd;
 
 	/* Ignore this stuff */
 
