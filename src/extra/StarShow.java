@@ -10,7 +10,7 @@ public class StarShow {
 	void makeStars() throws InterruptedException {	
 		//5. delete this line. you will draw the star again in step 8.
 		// 13. Set the speed to 8
-		bot.setSpeed(8);
+		bot.setSpeed(100);
 		// 6. Make a variable to hold the X position of the Robot and set it to 10
 		int x = 10;
 		// 7. Make a variable to hold the Y position of the Robot and set it to 600
