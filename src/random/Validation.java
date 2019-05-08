@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 public class Validation {
 	public static void main(String[] args) {
-		
+		for (int i = 0; i < 10; i++) {
 		Random randomMaker = new Random();
 		
 		int randomNumber = randomMaker.nextInt(5);
@@ -17,7 +17,7 @@ public class Validation {
 		System.out.println(randomNumber);
 
 		// 1. Use each value of randomNumber to give the user a random compliment.
-		for (int i = 0; i < 10; i++) {
+		
 
 		if(randomNumber == 0) {
 		JOptionPane.showMessageDialog(null, "You are a nice person.");	

@@ -17,19 +17,21 @@ import javax.swing.JOptionPane;
 public class NasaCountdown {
 	public static void main(String[] args) throws InterruptedException {
 		// 2. Use a pop-up to ask the user where to start counting from
-		String Answer = JOptionPane.showInputDialog("Nasa wants to shoot a rocket and they need a number to countdown from. It your choice so what do you choose?");
+		String CountDown = JOptionPane.showInputDialog("Nasa wants to shoot a rocket and they need a number to countdown from. It's your choice so what do you choose?");
 		// 3. Change the countdown to use the new starting point
-		
-		
+		int C = Integer.parseInt(CountDown);
+		for (int i = C; i > 0; i--) {
 		// 1. Print a countdown from 10 to 0 on the console
-	
-			// 4. Use the speak method to hear the countdown.
-		
+	    System.out.println(i);
+		// 4. Use the speak method to hear the countdown.
+	     speak(i+"");
 			// 6. Use the following code to make the program wait one second for each number: Thread.sleep(1000);
-		
+Thread.sleep(1000);
 		// 5. when the counting is done, speak "blastoff!"
+	
+		}
+	speak("Blastoff");
 	}
-
 static void speak(String words) {
    	 try {
    		 Runtime.getRuntime().exec("say " + words).waitFor();
@@ -38,5 +40,3 @@ static void speak(String words) {
    	 }
   }
 }
-
-
