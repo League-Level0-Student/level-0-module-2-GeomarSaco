@@ -9,7 +9,7 @@ public static void main(String[] args) {
 	int r3 = gen.nextInt(9);
 	int r4 = gen.nextInt(9);
 	int r5 = gen.nextInt(9);
-    String Answer = JOptionPane.showInputDialog(null, "What is your lottery number?");
+    String Answer = JOptionPane.showInputDialog(null, "What is your lottery number?(5 numbers)");
 	JOptionPane.showMessageDialog(null,"Lottery Ticket Winner "+r1+r2+r3+r4+r5);
 
 	if(Answer.equals(r1+r2+r3+r4+r5+"")) {
